@@ -1,11 +1,12 @@
 "use client"
-
+import { FaInstagram, FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import {
   Github,
   Linkedin,
+  Instagram,
   Mail,
   Phone,
   MapPin,
@@ -31,6 +32,8 @@ import Image from "next/image"
 import Link from "next/link"
 import { useState } from "react"
 import ContactForm from "@/components/contact-form"
+import Experience from "@/components/Experience"
+
 
 export default function Portfolio() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -40,6 +43,7 @@ export default function Portfolio() {
     { href: "#projects", label: "Projects" },
     { href: "#skills", label: "Skills" },
     { href: "#education", label: "Education" },
+    { href: "#experience", label: "Experience" },
     { href: "#certifications", label: "Certifications" },
     { href: "#contact", label: "Contact" },
   ]
@@ -104,7 +108,7 @@ export default function Portfolio() {
             asChild
           >
             <Link
-              href="https://drive.google.com/file/d/10aA_0iCnIpbM8zEOMViEilTWE4rL55qR/view?usp=sharing"
+              href="https://drive.google.com/file/d/1Fah8oAk9q9Iyg_Npe76I9V9JC9G4PptF/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -692,80 +696,203 @@ export default function Portfolio() {
           </div>
         </div>
       </section>
+<section
+  id="experience"
+  className="py-20 md:py-32 bg-gradient-to-br from-gray-50 via-purple-50/40 to-cyan-50/40"
+>
+  <div className="container px-4 md:px-6">
+    <div className="text-center mb-16">
+      <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
+        <span className="bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+          Experience
+        </span>
+      </h2>
+    </div>
 
-      {/* Enhanced Education Section */}
-      <section id="education" className="py-20 md:py-32 bg-gradient-to-br from-gray-50 via-purple-50/40 to-cyan-50/40">
-        <div className="container px-4 md:px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
-              <span className="bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
-                Education
-              </span>
-            </h2>
+    <div className="grid md:grid-cols-2 gap-8">
+      {/* Experience 1 - Codec Technologies */}
+      <Card className="border-0 shadow-xl shadow-cyan-500/10 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300 group h-full bg-gradient-to-br from-white via-cyan-50/50 to-blue-50/50 backdrop-blur">
+        <CardHeader>
+          <div className="flex items-center justify-between mb-4">
+            <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 shadow-lg shadow-cyan-500/30">
+              <Briefcase className="h-6 w-6 text-white" />
+            </div>
+              <Link
+              href="https://drive.google.com/file/d/11W_JTqtFmcuRW4rO3_mfihZgHxTUCGbV/view?usp=sharing" // certificate link here
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-purple-600 transition-colors"
+            >
+              <ExternalLink className="h-5 w-5" />
+            </Link>
           </div>
-
-          <div className="max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold mb-8 flex items-center gap-2">
-              <GraduationCap className="h-6 w-6 text-purple-500" />
-              <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-                Academic Journey
-              </span>
-            </h3>
-            <div className="space-y-6">
-              <Card className="border-0 shadow-xl shadow-purple-500/10 hover:shadow-2xl hover:shadow-purple-500/20 transition-all duration-300 bg-gradient-to-br from-white via-purple-50/50 to-cyan-50/50 backdrop-blur">
-                <CardContent className="pt-6">
-                  <div className="flex justify-between items-start mb-4">
-                    <div>
-                      <h4 className="text-lg font-semibold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-                        B.Tech in Computer Science Engineering
-                      </h4>
-                      <p className="text-blue-600 font-medium">Vellore Institute of Technology, Chennai</p>
-                      <p className="text-sm text-gray-600">2023 – 2027</p>
-                    </div>
-                    <Badge className="bg-gradient-to-r from-green-400 to-emerald-500 text-white border-0 shadow-lg">
-                      8.99 CGPA
-                    </Badge>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="border-0 shadow-xl shadow-blue-500/10 hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-300 bg-gradient-to-br from-white via-blue-50/50 to-cyan-50/50 backdrop-blur">
-                <CardContent className="pt-6">
-                  <div className="flex justify-between items-start mb-4">
-                    <div>
-                      <h4 className="text-lg font-semibold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
-                        CBSE 12th Board
-                      </h4>
-                      <p className="text-blue-600 font-medium">Central Academy School, Pali</p>
-                      <p className="text-sm text-gray-600">2020 – 2021</p>
-                    </div>
-                    <Badge className="bg-gradient-to-r from-blue-400 to-cyan-500 text-white border-0 shadow-lg">
-                      94.6%
-                    </Badge>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="border-0 shadow-xl shadow-green-500/10 hover:shadow-2xl hover:shadow-green-500/20 transition-all duration-300 bg-gradient-to-br from-white via-green-50/50 to-emerald-50/50 backdrop-blur">
-                <CardContent className="pt-6">
-                  <div className="flex justify-between items-start mb-4">
-                    <div>
-                      <h4 className="text-lg font-semibold bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">
-                        CBSE 10th Board
-                      </h4>
-                      <p className="text-blue-600 font-medium">Central Academy School, Pali</p>
-                      <p className="text-sm text-gray-600">2018 – 2019</p>
-                    </div>
-                    <Badge className="bg-gradient-to-r from-green-400 to-teal-500 text-white border-0 shadow-lg">
-                      90.0%
-                    </Badge>
-                  </div>
-                </CardContent>
-              </Card>
+          <CardTitle className="text-xl group-hover:bg-gradient-to-r group-hover:from-cyan-600 group-hover:to-blue-600 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+            Artificial Intelligence Intern @ Codec Technologies India
+          </CardTitle>
+          <CardDescription className="text-base text-gray-600">
+            Jul 2025 - Aug 2025 · 2 mos
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          <div className="space-y-4">
+            <p className="text-sm text-gray-600">
+              Completed an AICTE & ICAC approved internship focused on applied AI/ML techniques. 
+              Built **Customer Churn Prediction** (80%+ accuracy) and **Weather Data Analysis** projects. 
+              Deployed an interactive Streamlit app for real-time churn prediction.
+            </p>
+            <div className="flex flex-wrap gap-2">
+              <Badge className="bg-gradient-to-r from-blue-400 to-cyan-500 text-white border-0">Python</Badge>
+              <Badge className="bg-gradient-to-r from-green-400 to-teal-500 text-white border-0">EDA</Badge>
+              <Badge className="bg-gradient-to-r from-purple-400 to-pink-500 text-white border-0">ML Models</Badge>
+              <Badge className="bg-gradient-to-r from-orange-400 to-red-500 text-white border-0">Streamlit</Badge>
             </div>
           </div>
-        </div>
-      </section>
+        </CardContent>
+      </Card>
+
+      {/* Experience 2 - SRIP VIT */}
+      <Card className="border-0 shadow-xl shadow-purple-500/10 hover:shadow-2xl hover:shadow-purple-500/20 transition-all duration-300 group h-full bg-gradient-to-br from-white via-purple-50/50 to-pink-50/50 backdrop-blur">
+        <CardHeader>
+          <div className="flex items-center justify-between mb-4">
+            <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-r from-purple-500 to-pink-600 shadow-lg shadow-purple-500/30">
+              <GraduationCap className="h-6 w-6 text-white" />
+            </div>
+          </div>
+          <CardTitle className="text-xl group-hover:bg-gradient-to-r group-hover:from-purple-600 group-hover:to-pink-600 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+            Research Intern @ SRIP, VIT Chennai
+          </CardTitle>
+          <CardDescription className="text-base text-gray-600">
+            May 2025 - Jun 2025 · 2 mos · Chennai, India
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          <div className="space-y-4">
+            <p className="text-sm text-gray-600">
+              Worked as a Model Impact Analyst focusing on Bloom’s Taxonomy-based 
+              question generation using **FLAN-T5** and **Mistral-7B-Instruct**. 
+              Collected & curated large-scale educational datasets, fine-tuned models, 
+              and deployed on Hugging Face Hub. Evaluated outputs across taxonomy levels 
+              and proposed improvements with prompt engineering.
+            </p>
+            <div className="flex flex-wrap gap-2">
+              <Badge className="bg-gradient-to-r from-pink-400 to-purple-500 text-white border-0">NLP</Badge>
+              <Badge className="bg-gradient-to-r from-indigo-400 to-blue-500 text-white border-0">FLAN-T5</Badge>
+              <Badge className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white border-0">Mistral-7B</Badge>
+              <Badge className="bg-gradient-to-r from-green-400 to-teal-500 text-white border-0">HuggingFace</Badge>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+    </div>
+  </div>
+</section>
+
+
+    {/* Enhanced Education Section */}
+<section
+  id="education"
+  className="py-20 md:py-32 bg-gradient-to-br from-gray-50 via-purple-50/40 to-cyan-50/40"
+>
+  <div className="container px-4 md:px-6">
+    <div className="text-center mb-16">
+      <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
+        <span className="bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+          Education
+        </span>
+      </h2>
+    </div>
+
+    <div className="max-w-4xl mx-auto">
+      <h3 className="text-2xl font-bold mb-8 flex items-center gap-2">
+        <GraduationCap className="h-6 w-6 text-purple-500" />
+        <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+          Academic Journey
+        </span>
+      </h3>
+
+      <div className="space-y-6">
+        {/* B.Tech Section with GPA */}
+        <a
+          href="https://drive.google.com/file/d/1VfPBwUn5IdbPEamN3N_ma9uKaOUDCGGv/view?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Card className="cursor-pointer border-0 shadow-xl shadow-purple-500/10 hover:shadow-2xl hover:shadow-purple-500/20 transition-all duration-300 bg-gradient-to-br from-white via-purple-50/50 to-cyan-50/50 backdrop-blur">
+            <CardContent className="pt-6">
+              <div className="flex justify-between items-start mb-4">
+                <div>
+                  <h4 className="text-lg font-semibold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+                    B.Tech in Computer Science Engineering
+                  </h4>
+                  <p className="text-blue-600 font-medium">
+                    Vellore Institute of Technology, Chennai
+                  </p>
+                  <p className="text-sm text-gray-600">2023 – 2027</p>
+                </div>
+                <Badge className="bg-gradient-to-r from-green-400 to-emerald-500 text-white border-0 shadow-lg">
+                  8.99 CGPA
+                </Badge>
+              </div>
+            </CardContent>
+          </Card>
+        </a>
+
+        {/* CBSE 12th */}
+        <a
+          href="https://drive.google.com/file/d/1N_tdLOllh09s7v0nKSkFgA2pnpZeATlo/view?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Card className="cursor-pointer border-0 shadow-xl shadow-blue-500/10 hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-300 bg-gradient-to-br from-white via-blue-50/50 to-cyan-50/50 backdrop-blur">
+            <CardContent className="pt-6">
+              <div className="flex justify-between items-start mb-4">
+                <div>
+                  <h4 className="text-lg font-semibold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
+                    CBSE 12th Board
+                  </h4>
+                  <p className="text-blue-600 font-medium">
+                    Central Academy School, Pali
+                  </p>
+                  <p className="text-sm text-gray-600">2020 – 2021</p>
+                </div>
+                <Badge className="bg-gradient-to-r from-blue-400 to-cyan-500 text-white border-0 shadow-lg">
+                  94.6%
+                </Badge>
+              </div>
+            </CardContent>
+          </Card>
+        </a>
+
+        {/* CBSE 10th */}
+        <a
+          href="https://drive.google.com/file/d/1hdCylsxB_ExkAA-VWImlE3r2ekHoBQ8h/view?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Card className="cursor-pointer border-0 shadow-xl shadow-green-500/10 hover:shadow-2xl hover:shadow-green-500/20 transition-all duration-300 bg-gradient-to-br from-white via-green-50/50 to-emerald-50/50 backdrop-blur">
+            <CardContent className="pt-6">
+              <div className="flex justify-between items-start mb-4">
+                <div>
+                  <h4 className="text-lg font-semibold bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">
+                    CBSE 10th Board
+                  </h4>
+                  <p className="text-blue-600 font-medium">
+                    Central Academy School, Pali
+                  </p>
+                  <p className="text-sm text-gray-600">2018 – 2019</p>
+                </div>
+                <Badge className="bg-gradient-to-r from-green-400 to-teal-500 text-white border-0 shadow-lg">
+                  90.0%
+                </Badge>
+              </div>
+            </CardContent>
+          </Card>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* Enhanced Certifications Section */}
       <section
@@ -789,104 +916,161 @@ export default function Portfolio() {
           </div>
 
           <div className="max-w-4xl mx-auto space-y-8">
-            {/* Oracle Certification */}
-            <Card className="border-0 shadow-xl shadow-red-500/10 hover:shadow-2xl hover:shadow-red-500/20 transition-all duration-300 group bg-gradient-to-br from-white via-red-50/50 to-orange-50/50 backdrop-blur">
-              <CardContent className="pt-6">
-                <div className="flex items-center gap-6">
-                  <div className="flex-shrink-0">
-                    <div className="w-16 h-16 rounded-full bg-gradient-to-r from-red-400 to-orange-500 flex items-center justify-center overflow-hidden shadow-lg shadow-red-500/30">
-                      <Image
-                        src="/oracle.jpg"
-                        alt="Oracle Logo"
-                        width={64}
-                        height={64}
-                        className="w-12 h-12 object-contain"
-                      />
-                    </div>
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-semibold text-gray-900 group-hover:bg-gradient-to-r group-hover:from-red-600 group-hover:to-orange-600 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
-                      Oracle Certified Professional: Java SE 17 Developer
-                    </h3>
-                    <p className="text-blue-600 font-medium">Oracle University</p>
-                    <p className="text-sm text-gray-600">Issued: July 2025</p>
-                    <p className="text-sm text-gray-700 mt-2">
-                      Comprehensive certification validating advanced Java programming skills and enterprise development
-                      capabilities.
-                    </p>
-                  </div>
-                  <div className="flex-shrink-0">
-                    <Award className="h-8 w-8 text-red-500" />
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+           <Link
+  href="https://drive.google.com/file/d/1_GYbHrU-dTqAxyDAnVZOxr0lUKv0p5pN/view?usp=sharing" // replace with your certificate URL or /certificates/oracle.pdf
+  target="_blank"
+  rel="noopener noreferrer"
+  className="block"
+>
+  <Card className="border-0 shadow-xl shadow-red-500/10 hover:shadow-2xl hover:shadow-red-500/20 transition-all duration-300 group bg-gradient-to-br from-white via-red-50/50 to-orange-50/50 backdrop-blur cursor-pointer">
+    <CardContent className="pt-6">
+      <div className="flex items-center gap-6">
+        <div className="flex-shrink-0">
+          <div className="w-16 h-16 rounded-full bg-gradient-to-r from-red-400 to-orange-500 flex items-center justify-center overflow-hidden shadow-lg shadow-red-500/30">
+            <Image
+              src="/oracle.jpg"
+              alt="Oracle Logo"
+              width={64}
+              height={64}
+              className="w-12 h-12 object-contain"
+            />
+          </div>
+        </div>
+        <div className="flex-1">
+          <h3 className="text-xl font-semibold text-gray-900 group-hover:bg-gradient-to-r group-hover:from-red-600 group-hover:to-orange-600 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+            Oracle Certified Professional: Java SE 17 Developer
+          </h3>
+          <p className="text-blue-600 font-medium">Oracle University</p>
+          <p className="text-sm text-gray-600">Issued: July 2025</p>
+          <p className="text-sm text-gray-700 mt-2">
+            Comprehensive certification validating advanced Java programming skills and enterprise development
+            capabilities.
+          </p>
+        </div>
+        <div className="flex-shrink-0">
+          <Award className="h-8 w-8 text-red-500" />
+        </div>
+      </div>
+    </CardContent>
+  </Card>
+</Link>
+          {/* Oracle Certification */}
+<Link
+  href="https://drive.google.com/file/d/1G3sJ6Em6Zdj1BqqtjliV5eli4UG0p500/view?usp=sharing" // replace with actual certificate URL
+  target="_blank"
+  rel="noopener noreferrer"
+  className="block"
+>
+  <Card className="border-0 shadow-xl shadow-red-500/10 hover:shadow-2xl hover:shadow-red-500/20 transition-all duration-300 group bg-gradient-to-br from-white via-red-50/50 to-orange-50/50 backdrop-blur cursor-pointer">
+    <CardContent className="pt-6">
+      <div className="flex items-center gap-6">
+        <div className="flex-shrink-0">
+          <div className="w-16 h-16 rounded-full bg-gradient-to-r from-red-400 to-orange-500 flex items-center justify-center overflow-hidden shadow-lg shadow-red-500/30">
+            <Image
+              src="/oracle.jpg"
+              alt="Oracle Logo"
+              width={64}
+              height={64}
+              className="w-12 h-12 object-contain"
+            />
+          </div>
+        </div>
+        <div className="flex-1">
+          <h3 className="text-xl font-semibold text-gray-900 group-hover:bg-gradient-to-r group-hover:from-red-600 group-hover:to-orange-600 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+            Oracle Cloud Infrastructure 2025 Certified Generative AI Professional
+          </h3>
+          <p className="text-blue-600 font-medium">Oracle University</p>
+          <p className="text-sm text-gray-600">Issued: August 2025</p>
+          <p className="text-sm text-gray-700 mt-2">
+            Gained expertise in designing, deploying, and managing Generative AI solutions using Oracle Cloud Infrastructure.
+          </p>
+        </div>
+        <div className="flex-shrink-0">
+          <Award className="h-8 w-8 text-red-500" />
+        </div>
+      </div>
+    </CardContent>
+  </Card>
+</Link>
 
-            {/* Forage Certification */}
-            <Card className="border-0 shadow-xl shadow-blue-500/10 hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-300 group bg-gradient-to-br from-white via-blue-50/50 to-cyan-50/50 backdrop-blur">
-              <CardContent className="pt-6">
-                <div className="flex items-center gap-6">
-                  <div className="flex-shrink-0">
-                    <div className="w-16 h-16 rounded-full bg-gradient-to-r from-blue-400 to-cyan-500 flex items-center justify-center overflow-hidden shadow-lg shadow-blue-500/30">
-                      <Image
-                        src="/Forage.jpg"
-                        alt="Forage Logo"
-                        width={64}
-                        height={64}
-                        className="w-12 h-12 object-contain"
-                      />
-                    </div>
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-semibold text-gray-900 group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-cyan-600 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
-                      Data Analytics Virtual Job Simulation – Deloitte Australia
-                    </h3>
-                    <p className="text-blue-600 font-medium">Forage</p>
-                    <p className="text-sm text-gray-600">Issued: July 2025</p>
-                    <p className="text-sm text-gray-700 mt-2">
-                      Hands-on experience in data analytics, business intelligence, and strategic consulting
-                      methodologies.
-                    </p>
-                  </div>
-                  <div className="flex-shrink-0">
-                    <Briefcase className="h-8 w-8 text-blue-500" />
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+{/* Forage Certification */}
+<Link
+  href="https://drive.google.com/file/d/1_olfu6-GbvO5n143Gpbq0K-oUs9NNNsG/view?usp=sharing" // replace with actual certificate URL
+  target="_blank"
+  rel="noopener noreferrer"
+  className="block"
+>
+  <Card className="border-0 shadow-xl shadow-blue-500/10 hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-300 group bg-gradient-to-br from-white via-blue-50/50 to-cyan-50/50 backdrop-blur cursor-pointer">
+    <CardContent className="pt-6">
+      <div className="flex items-center gap-6">
+        <div className="flex-shrink-0">
+          <div className="w-16 h-16 rounded-full bg-gradient-to-r from-blue-400 to-cyan-500 flex items-center justify-center overflow-hidden shadow-lg shadow-blue-500/30">
+            <Image
+              src="/Forage.jpg"
+              alt="Forage Logo"
+              width={64}
+              height={64}
+              className="w-12 h-12 object-contain"
+            />
+          </div>
+        </div>
+        <div className="flex-1">
+          <h3 className="text-xl font-semibold text-gray-900 group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-cyan-600 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+            Data Analytics Virtual Job Simulation – Deloitte Australia
+          </h3>
+          <p className="text-blue-600 font-medium">Forage</p>
+          <p className="text-sm text-gray-600">Issued: July 2025</p>
+          <p className="text-sm text-gray-700 mt-2">
+            Hands-on experience in data analytics, business intelligence, and strategic consulting methodologies.
+          </p>
+        </div>
+        <div className="flex-shrink-0">
+          <Briefcase className="h-8 w-8 text-blue-500" />
+        </div>
+      </div>
+    </CardContent>
+  </Card>
+</Link>
 
-            {/* AWS Certification */}
-            <Card className="border-0 shadow-xl shadow-orange-500/10 hover:shadow-2xl hover:shadow-orange-500/20 transition-all duration-300 group bg-gradient-to-br from-white via-orange-50/50 to-yellow-50/50 backdrop-blur">
-              <CardContent className="pt-6">
-                <div className="flex items-center gap-6">
-                  <div className="flex-shrink-0">
-                    <div className="w-16 h-16 rounded-full bg-gradient-to-r from-orange-400 to-yellow-500 flex items-center justify-center overflow-hidden shadow-lg shadow-orange-500/30">
-                      <Image
-                        src="/aws.jpg"
-                        alt="AWS Logo"
-                        width={64}
-                        height={64}
-                        className="w-12 h-12 object-contain"
-                      />
-                    </div>
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-semibold text-gray-900 group-hover:bg-gradient-to-r group-hover:from-orange-600 group-hover:to-yellow-600 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
-                      Introduction to Generative AI – Art of the Possible
-                    </h3>
-                    <p className="text-blue-600 font-medium">Amazon Web Services (AWS)</p>
-                    <p className="text-sm text-gray-600">Issued: July 2025</p>
-                    <p className="text-sm text-gray-700 mt-2">
-                      Foundational understanding of generative AI technologies, applications, and implementation
-                      strategies.
-                    </p>
-                  </div>
-                  <div className="flex-shrink-0">
-                    <Brain className="h-8 w-8 text-orange-500" />
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+           {/* AWS Certification */}
+<a
+  href="https://drive.google.com/file/d/1agx0kkikg6RYUjGLje2lqQji91-Mm3W-/view?usp=sharing" // 🔗 replace with your actual certificate link
+  target="_blank"
+  rel="noopener noreferrer"
+  className="block"
+>
+  <Card className="border-0 shadow-xl shadow-orange-500/10 hover:shadow-2xl hover:shadow-orange-500/20 transition-all duration-300 group bg-gradient-to-br from-white via-orange-50/50 to-yellow-50/50 backdrop-blur cursor-pointer">
+    <CardContent className="pt-6">
+      <div className="flex items-center gap-6">
+        <div className="flex-shrink-0">
+          <div className="w-16 h-16 rounded-full bg-gradient-to-r from-orange-400 to-yellow-500 flex items-center justify-center overflow-hidden shadow-lg shadow-orange-500/30">
+            <Image
+              src="/aws.jpg"
+              alt="AWS Logo"
+              width={64}
+              height={64}
+              className="w-12 h-12 object-contain"
+            />
+          </div>
+        </div>
+        <div className="flex-1">
+          <h3 className="text-xl font-semibold text-gray-900 group-hover:bg-gradient-to-r group-hover:from-orange-600 group-hover:to-yellow-600 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+            Introduction to Generative AI – Art of the Possible
+          </h3>
+          <p className="text-blue-600 font-medium">Amazon Web Services (AWS)</p>
+          <p className="text-sm text-gray-600">Issued: July 2025</p>
+          <p className="text-sm text-gray-700 mt-2">
+            Foundational understanding of generative AI technologies, applications, and implementation strategies.
+          </p>
+        </div>
+        <div className="flex-shrink-0">
+          <Brain className="h-8 w-8 text-orange-500" />
+        </div>
+      </div>
+    </CardContent>
+  </Card>
+</a>
+
           </div>
         </div>
       </section>
@@ -947,27 +1131,37 @@ export default function Portfolio() {
 
                 <div className="flex justify-center gap-6">
                   <a
-                    href="mailto:kartikpatel06471@gmail.com"
-                    className="flex items-center justify-center w-12 h-12 rounded-full bg-white/20 hover:bg-white/30 transition-colors shadow-lg hover:shadow-xl backdrop-blur"
-                  >
-                    <Mail className="h-6 w-6 text-white" />
+    href="mailto:kartikpatel06471@gmail.com"
+    className="w-10 h-10 flex items-center justify-center rounded-full bg-red-500 hover:bg-red-600"
+  >
+    <FaEnvelope className="h-6 w-6 text-white" />
                   </a>
+                 <Link
+  href="https://linkedin.com/in/kartik-patel-49289028b"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="w-10 h-10 flex items-center justify-center rounded-full bg-blue-600 hover:bg-blue-700"
+>
+  <FaLinkedin className="h-6 w-6 text-white" />
+</Link>
+
+     <Link
+    href="https://instagram.com/kartikpatel1202"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="w-10 h-10 flex items-center justify-center rounded-full bg-pink-500 hover:bg-pink-600"
+  >
+    <FaInstagram className="h-5 w-5 text-white" />
+</Link>
                   <Link
-                    href="https://linkedin.com/in/kartik-patel-49289028b"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center w-12 h-12 rounded-full bg-white/20 hover:bg-white/30 transition-colors shadow-lg hover:shadow-xl backdrop-blur"
-                  >
-                    <Linkedin className="h-6 w-6 text-white" />
-                  </Link>
-                  <Link
-                    href="https://github.com/Kartikpatel1202"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center w-12 h-12 rounded-full bg-white/20 hover:bg-white/30 transition-colors shadow-lg hover:shadow-xl backdrop-blur"
-                  >
-                    <Github className="h-6 w-6 text-white" />
-                  </Link>
+    href="https://github.com/Kartikpatel1202" 
+    target="_blank"
+    rel="noopener noreferrer"
+    className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-gray-900"
+  >
+    <FaGithub className="h-6 w-6 text-white" />
+  </Link>
+ 
                 </div>
               </div>
 
