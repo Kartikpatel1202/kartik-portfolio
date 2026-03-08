@@ -108,7 +108,7 @@ export default function Portfolio() {
             asChild
           >
             <Link
-              href="https://drive.google.com/file/d/1Fah8oAk9q9Iyg_Npe76I9V9JC9G4PptF/view?usp=sharing"
+              href="https://drive.google.com/file/d/1P2Nw68tJfVInMofx5yxxciW1yuXOgkho/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -138,7 +138,7 @@ export default function Portfolio() {
                 asChild
               >
                 <Link
-                  href="https://drive.google.com/file/d/10aA_0iCnIpbM8zEOMViEilTWE4rL55qR/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1P2Nw68tJfVInMofx5yxxciW1yuXOgkho/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -215,7 +215,7 @@ export default function Portfolio() {
                 </div>
                 <div className="flex items-center gap-2 bg-gradient-to-r from-green-400 to-emerald-500 text-white px-3 py-2 rounded-full shadow-md">
                   <Award className="h-4 w-4" />
-                  8.99 CGPA
+                  9.09 CGPA
                 </div>
               </div>
             </div>
@@ -312,7 +312,7 @@ export default function Portfolio() {
                     </div>
                     <div className="flex justify-between items-center p-2 rounded-lg bg-white/50">
                       <span className="text-gray-600">CGPA:</span>
-                      <Badge className="bg-gradient-to-r from-green-400 to-emerald-500 text-white border-0">8.99</Badge>
+                      <Badge className="bg-gradient-to-r from-green-400 to-emerald-500 text-white border-0">9.09</Badge>
                     </div>
                     <div className="flex justify-between items-center p-2 rounded-lg bg-white/50">
                       <span className="text-gray-600">Interests:</span>
@@ -395,8 +395,104 @@ export default function Portfolio() {
                 </div>
               </CardContent>
             </Card>
-
             {/* Project 2 */}
+            <Card className="border-0 shadow-xl shadow-blue-500/10 hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-300 group h-full bg-gradient-to-br from-white via-blue-50/50 to-cyan-50/50 backdrop-blur">
+              <CardHeader>
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-r from-blue-400 to-cyan-500 shadow-lg shadow-blue-500/30">
+                    <Cloud className="h-6 w-6 text-white" />
+                  </div>
+                  <div className="flex gap-2">
+                    <Link
+                      href="https://github.com/Kartikpatel1202/Zero-Trust-Application-Security-System"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-400 hover:text-blue-500 transition-colors"
+                    >
+                      <Github className="h-5 w-5" />
+                    </Link>
+                    <Link href="#" className="text-gray-400 hover:text-blue-500 transition-colors">
+                      <ExternalLink className="h-5 w-5" />
+                    </Link>
+                  </div>
+                </div>
+                <CardTitle className="text-xl group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-cyan-600 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+                  Zero Trust Application Security System
+                </CardTitle>
+                <CardDescription className="text-base">
+                  Developed a secure messaging platform based on Zero Trust Architecture principles where every user, device, and request is
+                  continuously verified.
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-4">
+                  <p className="text-sm text-gray-600">
+                    Implemented AES-256-GCM encryption with dynamic key derivation to ensure message confidentiality and integrity.
+                    Integrated token-based authentication, device validation, and audit logging for secure and monitored communication.
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    <Badge className="bg-gradient-to-r from-blue-400 to-cyan-500 text-white border-0">Python</Badge>
+                    <Badge className="bg-gradient-to-r from-purple-400 to-blue-500 text-white border-0">
+                      Secure Messaging
+                    </Badge>
+                    <Badge className="bg-gradient-to-r from-cyan-400 to-teal-500 text-white border-0">Cryptography</Badge>
+                    <Badge className="bg-gradient-to-r from-indigo-400 to-purple-500 text-white border-0">
+                       Merkle Tree Identity Verification
+                    </Badge>
+                    <Badge className="bg-gradient-to-r from-green-400 to-blue-500 text-white border-0">Digital signatures</Badge>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+            {/* Project 3 */}
+            <Card className="border-0 shadow-xl shadow-blue-500/10 hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-300 group h-full bg-gradient-to-br from-white via-blue-50/50 to-cyan-50/50 backdrop-blur">
+              <CardHeader>
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-r from-blue-400 to-cyan-500 shadow-lg shadow-blue-500/30">
+                    <Cloud className="h-6 w-6 text-white" />
+                  </div>
+                  <div className="flex gap-2">
+                    <Link
+                      href="https://github.com/Kartikpatel1202/nutrition-tracker"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-400 hover:text-blue-500 transition-colors"
+                    >
+                      <Github className="h-5 w-5" />
+                    </Link>
+                    <Link href="#" className="text-gray-400 hover:text-blue-500 transition-colors">
+                      <ExternalLink className="h-5 w-5" />
+                    </Link>
+                  </div>
+                </div>
+                <CardTitle className="text-xl group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-cyan-600 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+                  AI Nutrition Tracker
+                </CardTitle>
+                <CardDescription className="text-base">
+                   Built full-stack nutrition tracking web app for hostel and daily meals.
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-4">
+                  <p className="text-sm text-gray-600">
+                    Implemented nutrient calculation, macros and micros, and meal suitability scoring, 
+–                   Generated deficiency alerts, recommendations, and visual dashboards.
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    <Badge className="bg-gradient-to-r from-blue-400 to-cyan-500 text-white border-0">Next.js</Badge>
+                    <Badge className="bg-gradient-to-r from-purple-400 to-blue-500 text-white border-0">
+                      Tailwind
+                    </Badge>
+                    <Badge className="bg-gradient-to-r from-cyan-400 to-teal-500 text-white border-0">Supabase</Badge>
+                    <Badge className="bg-gradient-to-r from-indigo-400 to-purple-500 text-white border-0">
+                      Typescript
+                    </Badge>
+                    <Badge className="bg-gradient-to-r from-green-400 to-blue-500 text-white border-0">ShadCN UI</Badge>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+            {/* Project 4 */}
             <Card className="border-0 shadow-xl shadow-green-500/10 hover:shadow-2xl hover:shadow-green-500/20 transition-all duration-300 group h-full bg-gradient-to-br from-white via-green-50/50 to-emerald-50/50 backdrop-blur">
               <CardHeader>
                 <div className="flex items-center justify-between mb-4">
@@ -443,7 +539,7 @@ export default function Portfolio() {
               </CardContent>
             </Card>
 
-            {/* Project 3 */}
+            {/* Project 5 */}
             <Card className="border-0 shadow-xl shadow-purple-500/10 hover:shadow-2xl hover:shadow-purple-500/20 transition-all duration-300 group h-full bg-gradient-to-br from-white via-purple-50/50 to-pink-50/50 backdrop-blur">
               <CardHeader>
                 <div className="flex items-center justify-between mb-4">
@@ -492,7 +588,7 @@ export default function Portfolio() {
               </CardContent>
             </Card>
 
-            {/* Project 4 - Heart Disease Prediction */}
+            {/* Project 6 - Heart Disease Prediction */}
             <Card className="border-0 shadow-xl shadow-red-500/10 hover:shadow-2xl hover:shadow-red-500/20 transition-all duration-300 group h-full bg-gradient-to-br from-white via-red-50/50 to-pink-50/50 backdrop-blur">
               <CardHeader>
                 <div className="flex items-center justify-between mb-4">
@@ -599,6 +695,7 @@ export default function Portfolio() {
                     <Badge className="bg-gradient-to-r from-orange-400 to-red-500 text-white border-0">Java</Badge>
                     <Badge className="bg-gradient-to-r from-purple-400 to-pink-500 text-white border-0">C++</Badge>
                     <Badge className="bg-gradient-to-r from-green-400 to-teal-500 text-white border-0">C</Badge>
+                     <Badge className="bg-gradient-to-r from-green-400 to-teal-500 text-white border-0">Typescript</Badge>
                     <Badge className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white border-0">
                       JavaScript
                     </Badge>
@@ -629,6 +726,7 @@ export default function Portfolio() {
                       TensorFlow
                     </Badge>
                     <Badge className="bg-gradient-to-r from-purple-400 to-pink-500 text-white border-0">Pandas</Badge>
+                    <Badge className="bg-gradient-to-r from-purple-400 to-pink-500 text-white border-0">Sentence Transformers</Badge>
                     <Badge className="bg-gradient-to-r from-cyan-400 to-blue-500 text-white border-0">NumPy</Badge>
                     <Badge className="bg-gradient-to-r from-indigo-400 to-purple-500 text-white border-0">
                       Matplotlib
@@ -659,6 +757,9 @@ export default function Portfolio() {
                     </Badge>
                     <Badge className="bg-gradient-to-r from-purple-400 to-pink-500 text-white border-0">DynamoDB</Badge>
                     <Badge className="bg-gradient-to-r from-cyan-400 to-blue-500 text-white border-0">SNS</Badge>
+                    <Badge className="bg-gradient-to-r from-cyan-400 to-blue-500 text-white border-0">Docker</Badge>
+                    <Badge className="bg-gradient-to-r from-cyan-400 to-blue-500 text-white border-0">Git</Badge>
+                    <Badge className="bg-gradient-to-r from-cyan-400 to-blue-500 text-white border-0">Bash</Badge>
                     <Badge className="bg-gradient-to-r from-indigo-400 to-purple-500 text-white border-0">
                       Streamlit
                     </Badge>
@@ -688,6 +789,28 @@ export default function Portfolio() {
                     <Badge className="bg-gradient-to-r from-cyan-400 to-blue-500 text-white border-0">IoT</Badge>
                     <Badge className="bg-gradient-to-r from-indigo-400 to-purple-500 text-white border-0">
                       Automation
+                    </Badge>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+            <Card className="border-0 shadow-xl shadow-orange-500/10 hover:shadow-2xl hover:shadow-orange-500/20 transition-all duration-300 h-full bg-gradient-to-br from-white via-orange-50/50 to-yellow-50/50 backdrop-blur">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <Database className="h-5 w-5 text-orange-500" />
+                  <span className="bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent">
+                    Blockchain and Cryptography
+                  </span>
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-3">
+                  <div className="flex flex-wrap gap-2">
+                    <Badge className="bg-gradient-to-r from-blue-400 to-purple-500 text-white border-0">Blockchain fundamentals</Badge>
+                    <Badge className="bg-gradient-to-r from-green-400 to-teal-500 text-white border-0">Hashing</Badge>
+                    <Badge className="bg-gradient-to-r from-purple-400 to-pink-500 text-white border-0">Digital Signature</Badge>
+                    <Badge className="bg-gradient-to-r from-red-400 to-orange-500 text-white border-0">
+                      peer-to-peer (P2P) networks
                     </Badge>
                   </div>
                 </div>
@@ -830,7 +953,7 @@ export default function Portfolio() {
                   <p className="text-sm text-gray-600">2023 – 2027</p>
                 </div>
                 <Badge className="bg-gradient-to-r from-green-400 to-emerald-500 text-white border-0 shadow-lg">
-                  8.99 CGPA
+                  9.09 CGPA
                 </Badge>
               </div>
             </CardContent>
