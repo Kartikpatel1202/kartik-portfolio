@@ -2,7 +2,7 @@
 
 Welcome to my personal developer portfolio built with **React**, **Tailwind CSS**, and **EmailJS**. This website showcases my projects, skills, certifications, and a fully functional contact form.
 
-🌐 **Live Site**: [https://kartik-portfolio.vercel.app](https://kartik-portfolio.vercel.app) *(update this after deployment)*
+🌐 **Live Site**: https://kartik-portfolio-1202.vercel.app/
 
 ---
 
