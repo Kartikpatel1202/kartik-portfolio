@@ -21,7 +21,7 @@ export default function ContactForm() {
 
     emailjs
       .sendForm(
-        "service_9ee4cqr", // ✅ Your Service ID
+        "service_hdzmwld", // ✅ Your Service ID
         "template_mc06z8c", // ✅ Your Template ID
         form.current!,
         "YSzGP9ZxStv4Lp1Xv", // ✅ Your Public Key
@@ -36,13 +36,12 @@ export default function ContactForm() {
           // Clear success message after 5 seconds
           setTimeout(() => setStatus(""), 5000)
         },
-        (error) => {
-          console.error("EmailJS Error:", error)
-          setStatus("❌ Failed to send message. Please try again.")
-          setIsLoading(false)
-          // Clear error message after 5 seconds
-          setTimeout(() => setStatus(""), 5000)
-        },
+       (error) => {
+        console.error("EmailJS Error:", error)
+        alert(JSON.stringify(error))
+        setStatus(`❌ ${error?.text || error?.message || "Failed to send message"}`)
+        setIsLoading(false)
+      },
       )
   }
 

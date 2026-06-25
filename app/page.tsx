@@ -566,6 +566,41 @@ export default function Portfolio() {
           <div className="max-w-3xl space-y-6">
 
             {/* Experience 1 */}
+              <Card className="border border-gray-200 shadow-sm bg-white">
+              <CardHeader>
+                <div className="flex items-start justify-between">
+                  <div className="flex items-start gap-4">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-50 mt-0.5">
+                      <Briefcase className="h-5 w-5 text-indigo-600" />
+                    </div>
+                    <div>
+                      <CardTitle className="text-base font-semibold text-gray-900">SDE Intern</CardTitle>
+                      <p className="text-sm font-medium text-indigo-600 mt-0.5">Successive Digital</p>
+                      <p className="text-xs text-gray-400 mt-0.5">June 2026 – Present · Noida, India</p>
+                    </div>
+                  </div>
+                  <Link
+                    href=""
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-400 hover:text-gray-600 transition-colors mt-1"
+                  >
+                    <ExternalLink className="h-4 w-4" />
+                  </Link>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-gray-600 mb-4">
+                  Hands-on training in full-stack web development with the MERN Stack. Working on real-world assignments, version-controlled projects, and modern web technologies while building scalable applications and preparing a production-ready MERN capstone project.
+                </p>
+                <div className="flex flex-wrap gap-1.5">
+                  {["MERN Stack","Javascript","React.js", "Node.js","Express.js","MongoDB","WebDevelopment"].map((tag) => (
+                    <span key={tag} className="text-xs px-2 py-0.5 rounded-md bg-gray-100 text-gray-600 font-medium">{tag}</span>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+            {/* Experience 2 */}
             <Card className="border border-gray-200 shadow-sm bg-white">
               <CardHeader>
                 <div className="flex items-start justify-between">
@@ -575,7 +610,7 @@ export default function Portfolio() {
                     </div>
                     <div>
                       <CardTitle className="text-base font-semibold text-gray-900">Artificial Intelligence Intern</CardTitle>
-                      <p className="text-sm font-medium text-indigo-600 mt-0.5">Codec Technologies India</p>
+                      <p className="text-sm font-medium text-indigo-600 mt-0.5">Codec Technologies</p>
                       <p className="text-xs text-gray-400 mt-0.5">Jul 2025 – Aug 2025 · Mumbai, India</p>
                     </div>
                   </div>
@@ -601,7 +636,7 @@ export default function Portfolio() {
               </CardContent>
             </Card>
 
-            {/* Experience 2 */}
+            {/* Experience 3 */}
             <Card className="border border-gray-200 shadow-sm bg-white">
               <CardHeader>
                 <div className="flex items-start gap-4">
